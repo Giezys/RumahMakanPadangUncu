@@ -1,0 +1,160 @@
+.navbar {
+    background-color: #F8DA8B;
+}
+.navbar-nav .nav-link {
+    color: #FF0000 !important; 
+}
+#myCarousel {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#myCarousel .carousel-inner {
+    width: 100%;
+    max-height: 500px; 
+}
+
+#myCarousel .carousel-inner .carousel-item {
+    width: 100%;
+    height: 100%;
+}
+
+#myCarousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+.navbar.transparent {
+    background-color: rgba(0,0,0,0.2); 
+}
+
+.navbar.transparent.navbar-scrolled {
+    background-color: #F8DA8B; 
+}
+.custom-image {
+    max-width: 50%; 
+    height: auto; 
+}
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.centered-content {
+    text-align: center;
+    padding: 20px;
+    background-color: #F8DA8B;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Lalezar', cursive;
+    color: black;
+}
+
+.centered-image {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+}
+.custom-container {
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+.customer-review {
+    background-color: #DCDCDC;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.star-rating {
+    color: #f39c12;
+}
+
+.review-text {
+    margin-top: 7px;
+}
+.custom-container2 {
+    background-color: #F8DA8B; 
+    padding: 10px; 
+    border-radius: 8px;
+    margin-top: 20px auto; 
+    width: 300px; 
+
+}
+.customer-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 50px; /* Sesuaikan dengan lebar yang Anda inginkan */
+    max-height: 50px; /* Sesuaikan dengan tinggi yang Anda inginkan */
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Latar belakang gelap */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Atur z-index untuk tumpukan elemen */
+  }
+  
+  .modal img {
+    max-width: 90%; /* Atur lebar gambar dalam modal */
+    max-height: 90%; /* Atur tinggi gambar dalam modal */
+    object-fit: contain; /* Menjaga aspek rasio gambar */
+    cursor: pointer; /* Kursor menjadi tanda tangan saat menavigasi */
+  }
+  
+  /* Gaya untuk menutup modal */
+  .modal img:hover {
+    transform: scale(1.05);
+  }
+  .centered-content img {
+    /* Gaya gambar saat tidak dihover */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .centered-content:hover img {
+    /* Gaya gambar saat dihover */
+    transform: scale(1.1); /* Anda bisa mengganti nilai ini sesuai preferensi Anda */
+  }
+  .customer-review {
+    position: relative;
+    transition: background-color 0.3s ease-in-out; /* Efek transisi warna latar belakang saat hover */
+  }
+  
+  .customer-review:hover {
+    background-color: #c7d58e; /* Ganti warna latar belakang saat hover */
+    /* Anda juga bisa menambahkan efek lain sesuai kebutuhan Anda, seperti shadow atau transform */
+  }
+  /* CSS */
+.container-right img {
+    width: 550px;
+    height: 300px;
+    transition: transform 0.3s ease-in-out; /* Efek transisi saat hover */
+  }
+  
+  .container-right img:hover {
+    transform: scale(1.1); /* Membesarkan gambar saat dihover */
+    /* Anda dapat mengganti nilai 1.1 sesuai dengan preferensi Anda */
+  }
+  .container-left iframe {
+    width: 550px;
+    height: 300px;
+    transition: border-color 0.3s ease-in-out; /* Efek transisi saat hover */
+  }
+  
+  .container-left iframe:hover {
+    border-color: #dfdf38; /* Mengubah warna border saat dihover */
+    /* Anda dapat menyesuaikan warna dan properti CSS lain sesuai dengan preferensi Anda */
+  }  

@@ -158,3 +158,21 @@
     border-color: #dfdf38; /* Mengubah warna border saat dihover */
     /* Anda dapat menyesuaikan warna dan properti CSS lain sesuai dengan preferensi Anda */
   }  
+ /* Untuk input pencarian */
+.form-control.form-control-sm {
+  width: 150px; /* Sesuaikan lebar sesuai kebutuhan Anda */
+  height: 30px; /* Sesuaikan tinggi sesuai kebutuhan Anda */
+  font-size: 14px; /* Sesuaikan ukuran font sesuai kebutuhan Anda */
+  color: #FF0000; /* Warna teks merah */
+}
+
+/* Untuk tombol pencarian */
+.btn.btn-outline-light.btn-sm {
+  height: 30px; /* Sesuaikan tinggi tombol sesuai kebutuhan Anda */
+  font-size: 12px; /* Sesuaikan ukuran font tombol sesuai kebutuhan Anda */
+  font-family: sans-serif; /* Ganti 'Nama Font' sesuai dengan jenis font yang Anda inginkan */
+  color: #FF0000;
+  font-weight: bold;
+}
+
+

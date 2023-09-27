@@ -301,8 +301,27 @@ reviewContainers.forEach((container, index) => {
   // Tambahkan event mouseleave
   container.addEventListener('mouseleave', () => {
     container.style.backgroundColor = ''; // Reset warna latar belakang
-    // Anda bisa menghapus efek lain atau menambahkan efek lain sesuai kebutuhan Anda
+    // Anda bisa menghapus efek lain atau menambahkan efek lain sesuai kebutuhan Anda batas suci
   });
+});
+function performSearch() {
+    // Ambil nilai yang dimasukkan oleh pengguna dalam input pencarian
+    var searchTerm = document.querySelector('.search-input').value;
+
+    // Di sini Anda dapat menentukan apa yang ingin Anda lakukan dengan nilai pencarian, misalnya, 
+    // melakukan pengalihan ke halaman hasil pencarian atau menampilkan hasil pencarian di halaman saat ini.
+    // Contoh sederhana:
+    alert('Anda mencari: ' + searchTerm);
+}
+
+// Tambahkan event listener untuk tombol "Search"
+document.querySelector('.search-button').addEventListener('click', performSearch);
+
+// Tambahkan event listener untuk input pencarian agar dapat mencari saat Enter ditekan
+document.querySelector('.search-input').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        performSearch();
+    }
 });
     </script>
 </body>

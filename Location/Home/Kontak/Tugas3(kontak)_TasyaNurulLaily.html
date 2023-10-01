@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Uncu.Imis</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Montserrat -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+   
+</head>
+<style>
+  .navbar {
+    background-color: #F8DA8B;
+}
+.navbar-nav .nav-link {
+    color: #FF0000 !important; /* Gunakan !important agar aturan ini mengambil prioritas */
+}
+#myCarousel {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#myCarousel .carousel-inner {
+    width: 100%;
+    max-height: 500px; /* Atur tinggi sesuai kebutuhan Anda */
+}
+
+#myCarousel .carousel-inner .carousel-item {
+    width: 100%;
+    height: 100%;
+}
+
+#myCarousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ini akan memastikan gambar diisi dengan baik */
+}
+
+/* Tambahkan CSS untuk navbar transparan */
+.navbar.transparent {
+    background-color: rgba(0,0,0,0.2); /* Warna latar belakang transparan */
+}
+
+.navbar.transparent.navbar-scrolled {
+    background-color: #F8DA8B; /* Warna latar belakang saat di-scroll */
+}
+
+.footer-container {
+    background-color: #C69940;
+    color: white;
+    text-align: center;
+    padding: 10px; /* Anda dapat menyesuaikan nilai padding sesuai keinginan Anda */
+    margin-top: 20px; /* Ini akan memberikan jarak atas pada footer jika diperlukan */
+    width: 100%; /* Mengatur lebar footer agar 100% dari lebar layar */
+    box-sizing: border-box; /* Menyertakan padding dalam perhitungan lebar */
+}
+
+
+  .footer-content {
+      max-width: 100%;
+  }
+
+    /* Tambahkan CSS untuk gambar di footer */
+    .footer-content ul.list-inline {
+    text-align: center; /* Mengatur teks ke tengah */
+  }
+
+  .footer-content ul.list-inline li {
+    display: inline-block;
+    margin: 0 10px; /* Memberikan jarak antara gambar */
+  }
+
+  .search-input {
+  display: none;
+}
+
+
+
+.btn.btn-outline-light.btn-sm {
+  height: 30px; /* Sesuaikan tinggi tombol sesuai kebutuhan Anda */
+  font-size: 12px; /* Sesuaikan ukuran font tombol sesuai kebutuhan Anda */
+  font-family: sans-serif; /* Ganti 'Nama Font' sesuai dengan jenis font yang Anda inginkan */
+  color: #FF0000;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+#button-open-mobile {
+  padding: 10px; 
+  }
+}
+form button {
+  background-color: #ffffe8;
+}
+#search-input-mobile {
+  display: block;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 5px; 
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  width: auto;
+}
+
+#search-bar-mobile {
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 20px;
+  width: 70%;
+}
+
+#search-bar-mobile::placeholder {
+  color: #888;
+}
+
+#search-bar-mobile:focus {
+  border: 2px solid #800000; 
+}
+
+/* Gaya untuk tombol pencarian */
+button.search-button[type="button"] {
+  background-color: #800000;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Gaya untuk tombol carousel */
+button.carousel-button[type="button"] {
+  background-color: transparent; /* Mengubah warna latar belakang menjadi transparan */
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="button"]:hover {
+  background-color: #ff6347;
+}
+/* Gaya untuk kontainer pencarian */
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Gaya untuk tombol pencarian */
+button.search-button {
+  background-color: #800000;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center; /* Pusatkan ikon dan teks secara vertikal */
+}
+
+/* Gaya untuk ikon */
+button.search-button i {
+  margin-right: 5px; /* Jarak antara ikon dan teks */
+}
+
+
+
+
+
+</style>
+<body>
+  <nav class="navbar navbar-expand-lg mb-3 fixed-top transparent">
+    <div class="container">
+      <a class="navbar-brand fw-bold link-light link-opacity-75-hover" href="#">
+        <img src="https://drive.google.com/uc?id=1uCFholF4PV6rRcR7im1Pi38-SArxspn4" alt="" height="40">
+      </a>
+      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link fw-bold link-light link-opacity-75-hover" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold link-light link-opacity-75-hover" href="#">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold link-light link-opacity-75-hover" href="#">Box Catering</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold link-light link-opacity-75-hover" href="#">Location</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold link-light link-opacity-75-hover" href="#">Kontak</a>
+          </li>
+        </ul>
+        <!-- Search bar -->
+        <form class="d-flex">
+          <input class="form-control form-control-sm me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light btn-sm" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+    
+
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators/dots -->
+
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://i.pinimg.com/564x/ff/65/64/ff6564d886061092f930012ff5a56df9.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/564x/f5/18/dc/f518dcfc43ad17bb393dc6767468db47.jpg" alt="Chicago" class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/564x/bc/81/54/bc81542a1d51eda448315f34cd07593f.jpg" alt="New York" class="d-block" style="width:100%">
+            </div>
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-button carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        
+        <button class="carousel-button carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <div class="container mt-5">
+      <h2>Contact Us</h2>
+      <form style="column-count: 2;">
+        <div style="font-size: 20px;">Nama :</div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="firstName" style="font-size: 13px;">First Name</label>
+              <input type="text" class="form-control" id="firstName" name="firstName" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="lastName" style="font-size: 13px;">Last Name</label>
+              <input type="text" class="form-control" id="lastName" name="lastName" required>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber" style="font-size: 20px;">Phone Number:</label>
+          <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" required>
+        </div>
+        <div class="form-group">
+          <label for="email" style="font-size: 20px;">Email:</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div style="font-size: 20px;">Pilih Tujuan Anda :</div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="purpose" name="purpose" value="Catering">
+          <label class="form-check-label" for="purpose">
+            Catering
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="purpose" name="purpose" value="Cooperation">
+          <label class="form-check-label" for="purpose">
+            Cooperation
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="purpose" name="purpose" value="Other">
+          <label class="form-check-label" for="purpose">
+            Other
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-secondary mt-3">Submit</button>
+
+        <div class="bg-light p-4 mt-5"> <!-- Mengubah p-4 dan mt-4 menjadi p-2 dan mt-2 -->
+          <h4>Cari:</h4>
+          <form role="search" method="get" class="search-form" action="https://www.restoransederhana.id/">
+            <label>
+              
+              <input type="search" class="form-control" placeholder="Cari &hellip;" value="" name="s" id="searchLocation">
+
+            </label>
+            <input type="submit" class="btn btn-secondary search-submit" value="Cari"/><br/>
+            <br/><h3>Kantor</h3>
+            <p style="font-size: 20px;">Alamat</p>
+            <p>Jl.Raya Klapanunggal-Bojong Rt/Rw Kp. Palahlar, Cikahuripan, Kec. Klapanunggal, Kabupaten Bogor, Jawa Barat 16710.</p><br/>
+            <br/><h3>Jam Operasional</h3>
+            <p>Senin-Minggu 08.00-20.00 WIB</p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-container">
+      <div class="container">
+        <div class="footer-content">
+          <ul class="list-inline d-flex justify-content-center"> <!-- Mengubah "justify-content-start" menjadi "justify-content-center" -->
+            <li class="list-inline-item">
+              <a href="https://www.instagram.com/uncu.imis/" target="_blank">
+                <img src="https://w7.pngwing.com/pngs/16/46/png-transparent-made-in-kings-heath-instagram-facebook-female-graphy-instagram-logo-instagram-icon-text-trademark-magenta.png" alt="Instagram Logo" style="width:40px;" class="rounded">
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://shopee.co.id/uncuimis" target="_blank">
+                <img src="https://logodownload.org/wp-content/uploads/2021/03/shopee-logo-0.png" alt="Shopee Logo" style="width:50px;" class="rounded">
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://msha.ke/uncuimisshop" target="_blank">
+                <img src="https://static.vecteezy.com/system/resources/previews/022/100/870/non_2x/whatsapp-logo-transparent-free-png.png" alt="WhatsApp Logo" style="width:40px;" class="rounded">
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://r.grab.com/g/0-6628b38e9e5746e8ae7715eb9e2d9678" target="_blank">
+                <img src="https://ifoxsoft.com/wp-content/uploads/2022/09/Logo-GrabFood-IfoxSoftCom.webp" alt="GrabFood Logo" style="width:50px;" class="rounded">
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://gofood.link/a/xnUsGV7" target="_blank">
+                <img src="https://printondemand.co.id/wp-content/uploads/2023/06/gofood-logo.png" alt="GoFood Logo" style="width:40px;" class="rounded">
+              </a>
+            </li>
+          </ul>
+          <p>Copyright © 2023 Warung Makan.Uncu Imis</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ... Kode JavaScript Anda ... -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script >
+        // Tambahkan JavaScript untuk mengubah latar belakang navbar saat di-scroll
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 50) {
+                    $('.navbar').addClass('navbar-scrolled');
+                } else {
+                    $('.navbar').removeClass('navbar-scrolled');
+                }
+            });
+        });
+
+        $(document).ready(function() {
+      // Menggunakan jQuery untuk menangani pengiriman form
+      $("form").submit(function(event) {
+          event.preventDefault(); // Mencegah pengiriman form default
+
+          // Dapatkan data dari form
+          var firstName = $("#firstName").val();
+          var lastName = $("#lastName").val();
+          var phoneNumber = $("#phoneNumber").val();
+          var email = $("#email").val();
+          var purpose = $("input[name='purpose']:checked").map(function() {
+              return $(this).val();
+          }).get().join(', ');
+          var message = $("#message").val();
+
+          // Buat pesan notifikasi berdasarkan data yang diisi oleh pengguna
+          var notificationMessage = "Terima kasih, " + firstName + " " + lastName + ". ";
+          notificationMessage += "Kami akan menghubungi Anda melalui email (" + email + ") atau telepon (" + phoneNumber + ") ";
+          notificationMessage += "mengenai tujuan Anda: " + purpose + ". Pesan Anda: " + message;
+
+          // Di sini Anda dapat mengirim data ke server atau melakukan tindakan lain sesuai kebutuhan Anda
+          // Misalnya, Anda dapat mengirim data menggunakan AJAX ke server
+          // atau menampilkan pesan konfirmasi kepada pengguna
+
+          // Menampilkan pesan notifikasi
+          alert(notificationMessage);
+
+          // Mengosongkan nilai-nilai input setelah pengiriman berhasil
+          $("#firstName").val("");
+          $("#lastName").val("");
+          $("#phoneNumber").val("");
+          $("#email").val("");
+          $("input[name='purpose']").prop('checked', false);
+          $("#message").val("");
+      });
+  });
+
+  $(document).ready(function() {
+    $("form.search-form").submit(function(event) {
+        event.preventDefault(); // Mencegah pengiriman form default
+
+        // Dapatkan nilai pencarian dari input
+        var searchQuery = $("#searchLocation").val();
+
+        // Redirect ke halaman pencarian dengan menggunakan nilai pencarian
+        var searchURL = "https://www.restoransederhana.id/?s=" + encodeURIComponent(searchQuery);
+        window.location.href = searchURL;
+    });
+});
+
+function openInputMobile() {
+    var searchInputMobile = document.getElementById("search-input-mobile");
+    if (searchInputMobile.style.display === "none" || searchInputMobile.style.display === "") {
+      searchInputMobile.style.display = "block";
+    } else {
+      searchInputMobile.style.display = "none";
+    }
+}
+
+function searchMobile() {
+    var keyword = document.getElementById("search-bar-mobile").value;
+    window.location.href = "search.html?keyword=" + keyword;
+}
+
+function performSearch() {
+    // Ambil nilai yang dimasukkan oleh pengguna dalam input pencarian
+    var searchTerm = document.querySelector('.search-input').value;
+
+    // Di sini Anda dapat menentukan apa yang ingin Anda lakukan dengan nilai pencarian, misalnya, 
+    // melakukan pengalihan ke halaman hasil pencarian atau menampilkan hasil pencarian di halaman saat ini.
+    // Contoh sederhana:
+    alert('Anda mencari: ' + searchTerm);
+}
+
+// Tambahkan event listener untuk tombol "Search"
+document.querySelector('.search-button').addEventListener('click', performSearch);
+
+// Tambahkan event listener untuk input pencarian agar dapat mencari saat Enter ditekan
+document.querySelector('.search-input').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        performSearch();
+    }
+});
+
+        
+    </script>
+</body>
+</html>

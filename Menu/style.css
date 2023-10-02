@@ -1,0 +1,45 @@
+body {
+    background-image: url('naspad\ 3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navbar {
+    background-color: #F8DA8B;
+}
+.navbar-nav .nav-link {
+    color: #FF0000 !important; /* Gunakan !important agar aturan ini mengambil prioritas */
+}
+#myCarousel {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#myCarousel .carousel-inner {
+    width: 100%;
+    max-height: 500px; /* Atur tinggi sesuai kebutuhan Anda */
+}
+
+#myCarousel .carousel-inner .carousel-item {
+    width: 100%;
+    height: 100%;
+}
+
+#myCarousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ini akan memastikan gambar diisi dengan baik */
+}
+
+/* Tambahkan CSS untuk navbar transparan */
+.navbar.transparent {
+    background-color: rgba(0,0,0,0.2); /* Warna latar belakang transparan */
+}
+
+.navbar.transparent.navbar-scrolled {
+    background-color: #F8DA8B; /* Warna latar belakang saat di-scroll */
+}
+.col-sm-3 {
+    padding: 10px;
+    text-align: center;
+}

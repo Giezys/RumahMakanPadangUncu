@@ -1,189 +1,194 @@
+// Variabel Global
+$primary-color: #800000;
+$secondary-color: #f8da8b;
+$text-color: #333;
+$primary-font: 'sans-serif';
+
 /* Gaya untuk header kontak form */
 .container {
-    h2 {
-      font-size: 24px;
-      color: #333;
-      margin-bottom: 20px;
+  h2 {
+    font-size: 24px;
+    color: $text-color;
+    margin-bottom: 20px;
+  }
+}
+
+/* Gaya untuk input form */
+.form-control {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f4f4f4;
+}
+
+/* Gaya untuk checkbox */
+.form-check-input:checked {
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+  box-shadow: none;
+}
+
+.form-check-label {
+  font-weight: normal;
+}
+
+/* Gaya untuk tombol submit */
+.btn-secondary {
+  background-color: $primary-color;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+/* Gaya untuk input pencarian di sidebar */
+#searchLocation {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Gaya untuk tombol pencarian di sidebar */
+.search-submit {
+  background-color: $primary-color;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+/* Gaya untuk navbar */
+.navbar {
+  background-color: $secondary-color;
+  .navbar-nav {
+    .nav-link {
+      color: #ff0000 !important;
     }
   }
-  
-  /* Gaya untuk input form */
-  .form-control {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #f4f4f4;
-  }
-  
-  /* Gaya untuk checkbox */
-  .form-check-input:checked {
-    background-color: #f8da8b;
-    border-color: #f8da8b;
-    box-shadow: none;
-  }
-  
-  .form-check-label {
-    font-weight: normal;
-  }
-  
-  /* Gaya untuk tombol submit */
-  .btn-secondary {
-    background-color: #800000;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    &:hover {
-      background-color: #700000;
-    }
-  }
-  
-  /* Gaya untuk input pencarian di sidebar */
-  #searchLocation {
+}
+
+/* Gaya untuk carousel */
+#myCarousel {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  .carousel-inner {
     width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  /* Gaya untuk tombol pencarian di sidebar */
-  .search-submit {
-    background-color: #800000;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    &:hover {
-      background-color: #701100;
-    }
-  }
-  
-  /* Gaya untuk navbar */
-  .navbar {
-    background-color: #f8da8b;
-    .navbar-nav {
-      .nav-link {
-        color: #ff0000 !important;
-      }
-    }
-  }
-  
-  /* Gaya untuk carousel */
-  #myCarousel {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    .carousel-inner {
+    max-height: 500px;
+    .carousel-item {
       width: 100%;
-      max-height: 500px;
-      .carousel-item {
+      height: 100%;
+      img {
         width: 100%;
         height: 100%;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+        object-fit: cover;
       }
     }
   }
-  
-  /* Gaya untuk footer */
-  .footer-container {
-    background-color: #f8da8b;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    width: 100%;
-    box-sizing: border-box;
-    .footer-content {
-      max-width: 100%;
-      ul.list-inline {
-        text-align: center;
-        li {
-          display: inline-block;
-          margin: 0 10px;
-        }
+}
+
+/* Gaya untuk footer */
+.footer-container {
+  background-color: $secondary-color;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  .footer-content {
+    max-width: 100%;
+    ul.list-inline {
+      text-align: center;
+      li {
+        display: inline-block;
+        margin: 0 10px;
       }
     }
   }
-  
-  /* Gaya untuk tombol pencarian dan carousel */
-  button.search-button[type="button"],
-  button.carousel-button[type="button"] {
-    background-color: #800000;
-    border: none;
-    border-radius: 20px;
-    padding: 5px 10px;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    &:hover {
-      background-color: #9e1800;
-    }
+}
+
+/* Gaya untuk tombol pencarian dan carousel */
+button.search-button[type="button"],
+button.carousel-button[type="button"] {
+  background-color: $primary-color;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: darken($primary-color, 10%);
   }
-  
-  /* Gaya untuk kontainer pencarian */
-  .search-container {
+}
+
+/* Gaya untuk kontainer pencarian */
+.search-container {
+  display: flex;
+  align-items: center;
+  button.search-button {
     display: flex;
     align-items: center;
-    button.search-button {
-      display: flex;
-      align-items: center;
-      i {
-        margin-right: 5px;
-      }
+    i {
+      margin-right: 5px;
     }
   }
-  
-  /* Gaya untuk input pencarian di versi mobile */
-  #search-input-mobile {
-    display: block;
-    background-color: #fff;
-    border-radius: 20px;
+}
+
+/* Gaya untuk input pencarian di versi mobile */
+#search-input-mobile {
+  display: block;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 5px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: auto;
+  #search-bar-mobile {
+    border: none;
+    outline: none;
     padding: 5px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: auto;
-    #search-bar-mobile {
-      border: none;
-      outline: none;
-      padding: 5px;
-      border-radius: 20px;
-      width: 70%;
-      &::placeholder {
-        color: #888;
-      }
-      &:focus {
-        border: 2px solid #800000;
-      }
+    border-radius: 20px;
+    width: 70%;
+    &::placeholder {
+      color: #888;
+    }
+    &:focus {
+      border: 2px solid $primary-color;
     }
   }
-  
-  /* Gaya untuk tombol kecil */
-  .btn.btn-outline-light.btn-sm {
-    height: 30px;
-    font-size: 12px;
-    font-family: sans-serif;
-    color: #ff0000;
-    font-weight: bold;
+}
+
+/* Gaya untuk tombol kecil */
+.btn.btn-outline-light.btn-sm {
+  height: 30px;
+  font-size: 12px;
+  font-family: $primary-font;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+/* Gaya khusus untuk perangkat mobile dengan lebar layar < 375px dan tinggi layar < 812px */
+@media (max-width: 374px) and (max-height: 811px) {
+  /* Mengatur ulang tampilan form kontak untuk mobile */
+  .container.mt-5 {
+    padding: 10px;
   }
-  
-  /* Gaya khusus untuk perangkat mobile dengan lebar layar < 375px dan tinggi layar < 812px */
-  @media (max-width: 374px) and (max-height: 811px) {
-    /* Mengatur ulang tampilan form kontak untuk mobile */
-    .container.mt-5 {
-      padding: 10px;
-    }
-  
-    /* Mengatur tampilan konten "Cari," "Kantor Alamat," dan "Jam Operasional" di bawah form kontak */
-    .bg-light.p-5.mt-1 {
-      padding: 10px;
-    }
-  
-    /* Tambahkan lebih banyak gaya CSS sesuai kebutuhan Anda */
+
+  /* Mengatur tampilan konten "Cari," "Kantor Alamat," dan "Jam Operasional" di bawah form kontak */
+  .bg-light.p-5.mt-1 {
+    padding: 10px;
   }
-  
+
+  /* Tambahkan lebih banyak gaya CSS sesuai kebutuhan Anda */
+}

@@ -4,6 +4,14 @@ $secondary-color: #f8da8b;
 $text-color: #333;
 $primary-font: 'sans-serif';
 
+// Fungsi untuk membuat warna lebih gelap
+@function darken-color($color, $percentage) {
+  $r: red($color) - ($percentage * red($color) / 100);
+  $g: green($color) - ($percentage * green($color) / 100);
+  $b: blue($color) - ($percentage * blue($color) / 100);
+  @return rgb($r, $g, $b);
+}
+
 /* Gaya untuk header kontak form */
 .container {
   h2 {
@@ -40,7 +48,7 @@ $primary-font: 'sans-serif';
   font-weight: bold;
   transition: background-color 0.3s ease;
   &:hover {
-    background-color: darken($primary-color, 10%);
+    background-color: darken-color($primary-color, 10%); // Menggunakan fungsi darken-color
   }
 }
 
@@ -62,7 +70,7 @@ $primary-font: 'sans-serif';
   cursor: pointer;
   transition: background-color 0.3s ease;
   &:hover {
-    background-color: darken($primary-color, 10%);
+    background-color: darken-color($primary-color, 10%); // Menggunakan fungsi darken-color
   }
 }
 
@@ -128,7 +136,7 @@ button.carousel-button[type="button"] {
   cursor: pointer;
   transition: background-color 0.3s ease;
   &:hover {
-    background-color: darken($primary-color, 10%);
+    background-color: darken-color($primary-color, 10%); // Menggunakan fungsi darken-color
   }
 }
 

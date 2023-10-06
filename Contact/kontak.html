@@ -20,73 +20,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-md mb-3 fixed-top transparent">
-    <!-- Tambahkan class "transparent" pada navbar -->
-        <div class="container">
-          <a
-            class="navbar-brand fw-bold link-light link-opacity-75-hover"
-            href="#"
-            ><img src="logo.jpg" alt="" height="40"></a
-          >
-          <button
-            class="navbar-toggler bg-white"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <!-- Menggunakan ms-auto untuk menggeser ke kanan -->
-              <li class="nav-item">
-                <a
-                  class="nav-link fw-bold link-light link-opacity-75-hover"
-                  href="Home.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link fw-bold link-light link-opacity-75-hover"
-                  href="#"
-                  >Menu</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link fw-bold link-light link-opacity-75-hover"
-                  href="#"
-                  >Box Catering</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link fw-bold link-light link-opacity-75-hover"
-                  href="Location/Location.html"
-                  >Location</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link fw-bold link-light link-opacity-75-hover"
-                  href="Kontak/Tugas3(kontak)_TasyaNurulLaily.html"
-                  >Kontak</a
-                >
-              </li>
-            </ul>
-            <!-- Search bar -->
-<form class="d-flex">
-  <input class="form-control form-control-sm me-2 search-input" type="search" placeholder="Search" aria-label="Search">
-  <button class="btn btn-outline-light btn-sm search-button" type="button">Search</button>
-</form>
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
 
-          </div>
-        </div>
-    </nav>
+      <a href="Home.html" class="logo d-flex align-items-center me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>Uncu.Imis<span>.</span></h1>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">Menu</a></li>
+          <li><a href="#menu">Box Catering</a></li>
+          <li><a href="#events">Location</a></li>
+          <li><a href="#chefs">Kontak</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <form class="d-flex">
+        <input class="form-control form-control-sm me-2 search-input" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light btn-sm search-button" type="button" style="background-color: crimson; border-color: crimson;">Search</button>
+    </form>
+    
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+
+
 
    <br><br><header class="bg-light p-5 header-image">
       <div class="container text-center">

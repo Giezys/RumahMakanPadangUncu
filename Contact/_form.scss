@@ -1,0 +1,17 @@
+// _form.scss
+.form-control {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f4f4f4;
+  }
+  
+  .form-check-input:checked {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+    box-shadow: none;
+  }
+  
+  .form-check-label {
+    font-weight: normal;
+  }
+  

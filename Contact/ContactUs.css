@@ -1,13 +1,15 @@
-/* Gaya untuk header kontak form */
 .container h2 {
   font-size: 24px;
   color: #333;
   margin-bottom: 20px;
 }
 
+.form-control {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f4f4f4;
+}
 
-
-/* Gaya untuk checkbox */
 .form-check-input:checked {
   background-color: #f8da8b;
   border-color: #f8da8b;
@@ -18,7 +20,6 @@
   font-weight: normal;
 }
 
-/* Gaya untuk tombol submit */
 .btn-secondary {
   background-color: #800000;
   color: #fff;
@@ -28,18 +29,9 @@
   transition: background-color 0.3s ease;
 }
 .btn-secondary:hover {
-  background-color: #700000;
+  background-color: rgb(33, 0, 0);
 }
 
-/* Gaya untuk input pencarian di sidebar */
-#searchLocation {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-/* Gaya untuk tombol pencarian di sidebar */
 .search-submit {
   background-color: #800000;
   color: #fff;
@@ -50,7 +42,14 @@
   transition: background-color 0.3s ease;
 }
 .search-submit:hover {
-  background-color: #701100;
+  background-color: rgb(33, 0, 0);
+}
+
+#searchLocation {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 :root {
@@ -342,7 +341,6 @@ section {
 }
 
 
-
 /* Search button styles */
 .search-button {
   background-color: crimson;
@@ -356,8 +354,6 @@ section {
 
 /*# sourceMappingURL=style.css.map */
 
-
-/* Gaya untuk carousel */
 #myCarousel {
   width: 100%;
   margin: 0;
@@ -377,9 +373,8 @@ section {
   object-fit: cover;
 }
 
-/* Gaya untuk footer */
 .footer-container {
-  background-color:#fdcf5d;
+  background-color: #f8da8b;
   color: white;
   text-align: center;
   padding: 10px;
@@ -398,58 +393,6 @@ section {
   margin: 0 10px;
 }
 
-button.search-button[type=button]:hover,
-button.carousel-button[type=button]:hover {
-  background-color: #9e1800;
-}
-
-/* Gaya untuk kontainer pencarian */
-.search-container {
-  display: flex;
-  align-items: center;
-}
-.search-container button.search-button {
-  display: flex;
-  align-items: center;
-}
-.search-container button.search-button i {
-  margin-right: 5px;
-}
-
-/* Gaya untuk input pencarian di versi mobile */
-#search-input-mobile {
-  display: block;
-  background-color: #fff;
-  border-radius: 20px;
-  padding: 5px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: auto;
-}
-#search-input-mobile #search-bar-mobile {
-  border: none;
-  outline: none;
-  padding: 5px;
-  border-radius: 20px;
-  width: 70%;
-}
-#search-input-mobile #search-bar-mobile::placeholder {
-  color: #888;
-}
-#search-input-mobile #search-bar-mobile:focus {
-  border: 2px solid #800000;
-}
-
-/* Gaya untuk tombol kecil */
-.btn.btn-outline-light.btn-sm {
-  height: 30px;
-  font-size: 12px;
-  font-family: sans-serif;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/* Gaya khusus untuk perangkat mobile dengan lebar layar < 375px dan tinggi layar < 812px */
 @media (max-width: 374px) and (max-height: 811px) {
   /* Mengatur ulang tampilan form kontak untuk mobile */
   .container.mt-5 {
@@ -461,5 +404,3 @@ button.carousel-button[type=button]:hover {
   }
   /* Tambahkan lebih banyak gaya CSS sesuai kebutuhan Anda */
 }
-
-/*# sourceMappingURL=ContactUs.css.map */

@@ -1,0 +1,15 @@
+// _mobile.scss
+@media (max-width: 374px) and (max-height: 811px) {
+    /* Mengatur ulang tampilan form kontak untuk mobile */
+    .container.mt-5 {
+      padding: 10px;
+    }
+  
+    /* Mengatur tampilan konten "Cari," "Kantor Alamat," dan "Jam Operasional" di bawah form kontak */
+    .bg-light.p-5.mt-1 {
+      padding: 10px;
+    }
+  
+    /* Tambahkan lebih banyak gaya CSS sesuai kebutuhan Anda */
+  }
+  

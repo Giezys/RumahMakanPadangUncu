@@ -1,0 +1,10 @@
+// _navbar.scss
+.navbar {
+    background-color: $secondary-color;
+    .navbar-nav {
+      .nav-link {
+        color: #ff0000 !important;
+      }
+    }
+  }
+  

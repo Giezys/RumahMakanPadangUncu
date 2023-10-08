@@ -1,0 +1,21 @@
+// _footer.scss
+.footer-container {
+    background-color: $secondary-color;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    .footer-content {
+      max-width: 100%;
+      ul.list-inline {
+        text-align: center;
+        li {
+          display: inline-block;
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+  

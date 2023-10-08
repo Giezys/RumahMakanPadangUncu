@@ -1,3 +1,6 @@
+// Import modul "math" di bagian atas file
+@use "sass:math";
+
 // Variabel Global
 $primary-color: #800000;
 $secondary-color: #f8da8b;
@@ -6,11 +9,26 @@ $primary-font: 'sans-serif';
 
 // Fungsi untuk membuat warna lebih gelap
 @function darken-color($color, $percentage) {
-  $r: red($color) - ($percentage * red($color) / 100);
-  $g: green($color) - ($percentage * green($color) / 100);
-  $b: blue($color) - ($percentage * blue($color) / 100);
-  @return rgb($r, $g, $b);
+  $r: math.div($percentage * red($color), 100);
+  $g: math.div($percentage * green($color), 100);
+  $b: math.div($percentage * blue($color), 100);
+  @return rgb($r, $g, $b);  
 }
+
+// Import file lain di bawah perintah @use
+@import 'variables';
+@import 'functions';
+@import 'header';
+@import 'form';
+@import 'buttons';
+@import 'sidebar';
+@import 'navbar';
+@import 'carousel';
+@import 'footer';
+@import 'mobile';
+
+// Selanjutnya, Anda dapat melanjutkan dengan aturan CSS Anda
+
 
 /* Gaya untuk header kontak form */
 .container {

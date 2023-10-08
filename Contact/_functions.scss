@@ -1,0 +1,8 @@
+// _functions.scss
+@function darken-color($color, $percentage) {
+    $r: math.div($percentage * red($color), 100);
+    $g: math.div($percentage * green($color), 100);
+    $b: math.div($percentage * blue($color), 100);
+    @return rgb($r, $g, $b);
+  }
+  

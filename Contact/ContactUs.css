@@ -1,3 +1,38 @@
+.btn-color-1 {
+  background-color: darken-color(#800000, 10%);
+}
+.btn-color-1:hover {
+  background-color: darken-color(#800000, 20%);
+}
+
+.btn-color-2 {
+  background-color: darken-color(#800000, 20%);
+}
+.btn-color-2:hover {
+  background-color: darken-color(#800000, 30%);
+}
+
+.btn-color-3 {
+  background-color: darken-color(#800000, 30%);
+}
+.btn-color-3:hover {
+  background-color: darken-color(#800000, 40%);
+}
+
+.btn-color-4 {
+  background-color: darken-color(#800000, 40%);
+}
+.btn-color-4:hover {
+  background-color: darken-color(#800000, 50%);
+}
+
+.btn-color-5 {
+  background-color: darken-color(#800000, 50%);
+}
+.btn-color-5:hover {
+  background-color: darken-color(#800000, 60%);
+}
+
 .container h2 {
   font-size: 24px;
   color: #333;
@@ -11,8 +46,8 @@
 }
 
 .form-check-input:checked {
-  background-color: #800000;
-  border-color: #800000;
+  background-color: #f8da8b;
+  border-color: #f8da8b;
   box-shadow: none;
 }
 
@@ -52,307 +87,12 @@
   border: 1px solid #ccc;
 }
 
-:root {
-  scroll-behavior: smooth;
+.navbar {
+  background-color: #f8da8b;
 }
-
-body {
-  font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  color: #212529;
+.navbar .navbar-nav .nav-link {
+  color: #ff0000 !important;
 }
-body a {
-  color: #ce1212;
-  text-decoration: none;
-}
-body a:hover {
-  color: #ec2727;
-}
-body h1, body h2, body h3, body h4, body h5, body h6 {
-  font-family: "Inter", sans-serif;
-}
-
-/* Header */
-.header {
-  background: #fdcf5d;
-  transition: all 0.5s;
-  z-index: 997;
-  height: calculate-header-height(100px, 90px);
-  border-bottom: 1px solid #fff;
-}
-.header.sticked {
-  border-color: white;
-}
-.header .logo img {
-  max-height: 40px;
-  margin-right: 6px;
-}
-.header .logo h1 {
-  font-size: 28px;
-  font-weight: 700;
-  color: #e51414;
-  margin: 0;
-  font-family: var(--font-secondary);
-}
-.header .logo h1 span {
-  color: var(--color-primary);
-}
-
-/* Section */
-section {
-  scroll-margin-top: calculate-header-height(90px, 70px);
-}
-
-/* Desktop Navigation */
-@media (min-width: 1280px) {
-  .navbar {
-    padding: 0;
-    background-color: #fdcf5d;
-  }
-  .navbar ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    list-style: none;
-    align-items: center;
-  }
-  .navbar li {
-    position: relative;
-  }
-  .navbar li > ul {
-    left: 28px;
-    top: calc(100% + 30px);
-  }
-  .navbar > ul > li {
-    white-space: nowrap;
-    padding: 10px 0 10px 28px;
-  }
-  .navbar a,
-  .navbar a:focus {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 3px;
-    font-family: var(--font-secondary);
-    font-size: 16px;
-    font-weight: 600;
-    color: #e9120e;
-    white-space: nowrap;
-    transition: 0.3s;
-    position: relative;
-  }
-  .navbar a i,
-  .navbar a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-  }
-  .navbar a:before,
-  .navbar a:focus:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: -6px;
-    left: 0;
-    background-color: #e9120e;
-    visibility: hidden;
-    width: 0;
-    transition: all 0.3s ease-in-out;
-  }
-  .navbar a:hover:before,
-  .navbar li:hover > a:before,
-  .navbar .active:before {
-    visibility: visible;
-    width: 100%;
-  }
-  .navbar a:hover,
-  .navbar .active,
-  .navbar .active:focus,
-  .navbar li:hover > a {
-    color: #000;
-  }
-  .navbar .dropdown ul {
-    display: block;
-    position: absolute;
-    z-index: 99;
-    opacity: 0;
-    visibility: hidden;
-    background: #e6ee09;
-    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-    transition: 0.3s;
-    border-radius: 4px;
-  }
-  .navbar .dropdown ul li {
-    min-width: 200px;
-  }
-  .navbar .dropdown ul li a {
-    padding: 10px 20px;
-    font-size: 15px;
-    text-transform: none;
-    font-weight: 600;
-  }
-  .navbar .dropdown ul li a i {
-    font-size: 12px;
-  }
-  .navbar .dropdown ul li a:hover,
-  .navbar .dropdown ul li .active:hover > a,
-  .navbar .dropdown ul li li:hover > a {
-    color: #e9120e;
-  }
-  .navbar .dropdown:hover > ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-  }
-  .navbar .dropdown .dropdown ul {
-    top: 0;
-    left: calc(100% - 30px);
-    visibility: hidden;
-  }
-  .navbar .dropdown .dropdown ul .dropdown:hover > ul {
-    opacity: 1;
-    top: 0;
-    left: 100%;
-    visibility: visible;
-  }
-}
-@media (min-width: 1280px) and (min-width: 1280px) and (max-width: 1366px) {
-  .dropdown .dropdown ul {
-    left: -90%;
-  }
-  .dropdown .dropdown:hover > ul {
-    left: -100%;
-  }
-}
-@media (min-width: 1280px) {
-  .mobile-nav-show,
-  .mobile-nav-hide {
-    display: none;
-  }
-  .navbar.transparent {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-  .navbar.transparent.navbar-scrolled {
-    background-color: #F8DA8B;
-  }
-}
-/* Mobile Navigation */
-@media (max-width: 1279px) {
-  .navbar {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 500px;
-    max-width: 750px;
-    border-left: 1px solid #666;
-    bottom: 0;
-    transition: 0.3s;
-    z-index: 9997;
-  }
-  .navbar ul {
-    position: absolute;
-    inset: 0;
-    padding: 50px 0 10px 0;
-    margin: 0;
-    background: rgba(255, 255, 255, 0.9);
-    overflow-y: auto;
-    transition: 0.3s;
-    z-index: 9997;
-  }
-  .navbar a,
-  .navbar a:focus {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    font-family: var(--font-secondary);
-    border-bottom: 2px solid rgba(158, 148, 67, 0.8);
-    font-size: 16px;
-    font-weight: 600;
-    color: #7f7f90;
-    white-space: nowrap;
-    transition: 0.3s;
-  }
-  .navbar a i,
-  .navbar a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-  }
-  .navbar a:hover,
-  .navbar a li:hover > a,
-  .navbar a:focus:hover,
-  .navbar a:focus li:hover > a {
-    color: #000;
-  }
-  .navbar .active,
-  .navbar .active:focus {
-    color: #000;
-    border-color: #e9120e;
-  }
-
-  .navbar .mobile-nav-hide {
-    color: rgba(158, 148, 67, 0.8);
-    font-size: 32px;
-    cursor: pointer;
-    line-height: 0;
-    transition: 0.5s;
-    position: fixed;
-    right: 20px;
-    top: 20px;
-    z-index: 9997;
-  }
-  .navbar .mobile-nav-active {
-    overflow: hidden;
-  }
-  .navbar .mobile-nav-active .navbar {
-    right: 0;
-  }
-  .navbar .mobile-nav-active .navbar:before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.8);
-    z-index: 9996;
-  }
-}
-
-
-
-/* Scroll top button styles */
-.scroll-top {
-  visibility: hidden;
-  position: fixed;
-  bottom: 20px;
-  right: 15px;
-  z-index: 9;
-  font-size: 20px;
-  color: #fff;
-  background: #ce1212;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  border-radius: 50%;
-  line-height: 40px;
-  transition: 0.3s;
-}
-.scroll-top:hover {
-  background: #ec2727;
-}
-
-
-/* Search button styles */
-.search-button {
-  background-color: crimson;
-  border-color: crimson;
-  color: #fff;
-}
-.search-button:hover {
-  background-color: #9f0e0e;
-  border-color: #9f0e0e;
-}
-
-/*# sourceMappingURL=style.css.map */
 
 #myCarousel {
   width: 100%;
@@ -404,3 +144,188 @@ section {
   }
   /* Tambahkan lebih banyak gaya CSS sesuai kebutuhan Anda */
 }
+/* Gaya untuk header kontak form */
+.container h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Gaya untuk input form */
+.form-control {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f4f4f4;
+}
+
+/* Gaya untuk checkbox */
+.form-check-input:checked {
+  background-color: #f8da8b;
+  border-color: #f8da8b;
+  box-shadow: none;
+}
+
+.form-check-label {
+  font-weight: normal;
+}
+
+/* Gaya untuk tombol submit */
+.btn-secondary {
+  background-color: #800000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.btn-secondary:hover {
+  background-color: rgb(33, 0, 0);
+}
+
+/* Gaya untuk input pencarian di sidebar */
+#searchLocation {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Gaya untuk tombol pencarian di sidebar */
+.search-submit {
+  background-color: #800000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.search-submit:hover {
+  background-color: rgb(33, 0, 0);
+}
+
+/* Gaya untuk navbar */
+.navbar {
+  background-color: #f8da8b;
+}
+.navbar .navbar-nav .nav-link {
+  color: #ff0000 !important;
+}
+
+/* Gaya untuk carousel */
+#myCarousel {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#myCarousel .carousel-inner {
+  width: 100%;
+  max-height: 500px;
+}
+#myCarousel .carousel-inner .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+#myCarousel .carousel-inner .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Gaya untuk footer */
+.footer-container {
+  background-color: #f8da8b;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.footer-container .footer-content {
+  max-width: 100%;
+}
+.footer-container .footer-content ul.list-inline {
+  text-align: center;
+}
+.footer-container .footer-content ul.list-inline li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* Gaya untuk tombol pencarian dan carousel */
+button.search-button[type=button],
+button.carousel-button[type=button] {
+  background-color: #800000;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button.search-button[type=button]:hover,
+button.carousel-button[type=button]:hover {
+  background-color: rgb(33, 0, 0);
+}
+
+/* Gaya untuk kontainer pencarian */
+.search-container {
+  display: flex;
+  align-items: center;
+}
+.search-container button.search-button {
+  display: flex;
+  align-items: center;
+}
+.search-container button.search-button i {
+  margin-right: 5px;
+}
+
+/* Gaya untuk input pencarian di versi mobile */
+#search-input-mobile {
+  display: block;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 5px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: auto;
+}
+#search-input-mobile #search-bar-mobile {
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 20px;
+  width: 70%;
+}
+#search-input-mobile #search-bar-mobile::placeholder {
+  color: #888;
+}
+#search-input-mobile #search-bar-mobile:focus {
+  border: 2px solid #800000;
+}
+
+/* Gaya untuk tombol kecil */
+.btn.btn-outline-light.btn-sm {
+  height: 30px;
+  font-size: 12px;
+  font-family: "sans-serif";
+  color: #ff0000;
+  font-weight: bold;
+}
+
+/* Gaya khusus untuk perangkat mobile dengan lebar layar < 375px dan tinggi layar < 812px */
+@media (max-width: 374px) and (max-height: 811px) {
+  /* Mengatur ulang tampilan form kontak untuk mobile */
+  .container.mt-5 {
+    padding: 10px;
+  }
+  /* Mengatur tampilan konten "Cari," "Kantor Alamat," dan "Jam Operasional" di bawah form kontak */
+  .bg-light.p-5.mt-1 {
+    padding: 10px;
+  }
+  /* Tambahkan lebih banyak gaya CSS sesuai kebutuhan Anda */
+}
+
+/*# sourceMappingURL=ContactUs.css.map */

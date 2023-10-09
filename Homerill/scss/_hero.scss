@@ -5,6 +5,7 @@
     position: relative;
     min-height: 75vh;
     padding: 180px 0 80px 0;
+    background-image: url('../assets/img/bg.jpg');
   }
   
   .section-bg {
@@ -15,8 +16,8 @@
     font-size: 70px;
     font-weight: 700;
     margin-bottom: 20px;
-    color: #ce1212;
     font-family: "Amatic SC", sans-serif;
+    color: crimson;
   
     span {
       color: variable.$primary-color;
@@ -27,6 +28,7 @@
     color: #4f4f5a;
     font-weight: 400;
     margin-bottom: 30px;
+    font-size: 25px;
   }
   
   .col-lg-5 img {

@@ -258,3 +258,6 @@ $(document).ready(function() {
     }, 300);
   });
 });
+function bukaTautan(url) {
+  window.open(url, '_blank');
+}

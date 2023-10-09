@@ -291,8 +291,8 @@
 }
 
 .hero h2 {
-  font-size: 64px;
-  font-weight: 700;
+  font-size: 68px;
+  font-weight: 500;
   margin-bottom: 20px;
   color: #37373f;
   font-family: "Amatic SC", sans-serif;
@@ -305,6 +305,7 @@
   color: #4f4f5a;
   font-weight: 400;
   margin-bottom: 30px;
+  font-size: 30px;
 }
 
 .col-lg-5 img {
@@ -398,12 +399,17 @@ i {
 }
 .menu h2 {
   font-family: "Amatic SC", sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   color: #ce1212;
+}
+.menu p {
+  font-family: "Amatic SC", sans-serif;
+  font-size: 50px;
+  color: #37373f;
 }
 .menu .ingredients {
   font-family: "Times New Roman", Times, serif;
-  font-size: 15px;
+  font-size: 25px;
   color: #ce1212;
 }
 .menu .nav-tabs {
@@ -488,11 +494,17 @@ section {
 }
 
 /* Testimonials Section styles */
-.testimonials .section-header {
+.testimonials .section-header h2 {
   margin-bottom: 40px;
   font-family: "Amatic SC", sans-serif;
-  font-size: 20px;
+  font-size: 50px;
   text-align: center;
+  color: #9f0e0e;
+}
+.section-header .p {
+  font-family: "Amatic SC", sans-serif;
+  color: #37373f;
+  font-size: 30px;
 }
 .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
@@ -880,9 +892,16 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 .gallery {
   overflow: hidden;
 }
-.section-header {
+.section-header h2 {
   font-family: "Amatic SC", sans-serif;
-  font-size: 20px;
+  font-size: 50px;
+  text-align: center;
+  color: #9f0e0e;
+}
+.section-header p {
+  font-family: "Amatic SC", sans-serif;
+  font-size: 30px;
+  color: #4f4f5a;
   text-align: center;
 }
 .gallery .swiper-pagination {

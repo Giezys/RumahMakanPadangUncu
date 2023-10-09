@@ -308,8 +308,6 @@ body {
     }
   }
 
-
-
   /* Scroll top button styles */
   .scroll-top {
     visibility: hidden;
@@ -331,8 +329,6 @@ body {
     background: #ec2727;
   }
   
-
-  
   /* Search button styles */
   .search-button {
     background-color: crimson;
@@ -345,4 +341,6 @@ body {
   }
   
   /*# sourceMappingURL=style.css.map */
-  
+  .card-price {
+    color: crimson;
+  }

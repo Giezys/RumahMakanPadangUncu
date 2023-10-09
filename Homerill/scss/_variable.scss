@@ -1,0 +1,57 @@
+$font-stack: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$primary-color: #ce1212;
+$hover-color: #ec2727;
+$primary-color: #e51414;
+$secondary-color: var(--color-primary);
+$font-secondary: var(--font-secondary);
+/*section*/
+$font-secondary-section: var(--font-secondary);
+$color-primary: #e9120e;
+$color-secondary: rgba(158, 148, 67, 0.8);
+$color-dropdown-background: #e6ee09;
+$color-overlay-background: rgba(255, 255, 255, 0.9);
+$color-overlay: rgba(255, 255, 255, 0.8);
+$color-carousel-transparent: rgba(0, 0, 0, 0.2);
+$color-carousel-scrolled: #F8DA8B;
+$transition-speed: 0.3s;
+$z-index-navbar: 9997;
+$z-index-dropdown: 99;
+$z-index-overlay: 9996;
+/*Hero*/
+$primary-color-hero: #ce1212;
+$secondary-color-hero: rgba(206, 18, 18, 0.8);
+$shadow-color: rgba(0, 0, 0, 0.08);
+$call-us-background: #fff;
+$play-btn-gradient: radial-gradient(#ce1212 50%, rgba(206, 18, 18, 0.4) 52%);
+$btn-transition-speed: #e9120e;
+$box-shadow: #e9120e;
+$btn-hover-box-shadow: #4f4f5a; 
+/*About*/
+$primary-color-about: #ce1212;
+$secondary-color-about: #e61b0c;
+$text-color-about: #4f4f5a;
+$header-font: "Amatic SC", sans-serif;
+$body-font: "Inter", sans-serif;
+$ingredient-color: #8d8d9b;
+$tab-hover-color: #676775;
+$tab-hover-background: #ce1212;
+$menu-item-margin: 15px;
+$box-shadow-color: rgba(0, 2, 25);
+/*Menu*/
+$primary-color-menu: #ce1212;
+$secondary-color-menu: #df1529;
+$text-color-menu: #ce1212;
+$quote-color: #f05656;
+$star-color: #ffc107;
+/*Testimonials*/
+$primary-color: #ce1212;
+$swiper-pagination-bullet-color: #d1d1d7;
+$swiper-pagination-bullet-active-color: #ce1212;
+/*Contact*/
+$primary-color-contact: #ce1212;
+$hover-color: #ec2727;
+$hover-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+$transition-duration: 0.3s;
+$primary-color-contact: #ce1212;
+$error-message-bg: #df1529;
+$sent-message-bg: #059652;

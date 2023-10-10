@@ -1,27 +1,19 @@
-/*$primary-color: #ce1212;
-$error-message-bg: #df1529;
-$sent-message-bg: #059652;*/
 /*section*/
 /*Hero*/
 /*About*/
 /*Menu*/
 /*Testimonials*/
 /*Contact*/
-/*$primary-color-about: #4f4f5a;
-$call-us-background: #your-call-us-background-color;
-$box-shadow-color: #your-box-shadow-color;
-$play-btn-gradient: #your-play-btn-gradient-color;
-$secondary-color: #your-secondary-color;
-$primary-color: #your-primary-color;*/
+/* About Section styles */
 .about .section-header h2 {
   font-family: "Amatic SC", sans-serif;
-  font-size: 25px;
-  color: #4f4f5a;
+  font-size: 60px;
+  color: ce1212;
 }
 .about .section-header p {
   font-family: "Amatic SC", sans-serif;
-  font-size: 65px;
-  color: #e9120e;
+  font-size: 27px;
+  color: #37373f;
 }
 .about .about-img {
   min-height: 500px;
@@ -56,30 +48,11 @@ $primary-color: #your-primary-color;*/
   list-style: none;
   padding: 0;
 }
-.about .call-us .content ul li:nth-child(1) {
+.about .call-us .content ul li {
   padding: 0 0 8px 26px;
+  position: relative;
 }
-.about .call-us .content ul li:nth-child(1) i {
-  position: absolute;
-  font-size: 20px;
-  left: 0;
-  top: -3px;
-  color: #ce1212;
-}
-.about .call-us .content ul li:nth-child(2) {
-  padding: 0 0 8px 26px;
-}
-.about .call-us .content ul li:nth-child(2) i {
-  position: absolute;
-  font-size: 20px;
-  left: 0;
-  top: -3px;
-  color: #ce1212;
-}
-.about .call-us .content ul li:nth-child(3) {
-  padding: 0 0 8px 26px;
-}
-.about .call-us .content ul li:nth-child(3) i {
+.about .call-us .content ul li i {
   position: absolute;
   font-size: 20px;
   left: 0;
@@ -92,7 +65,7 @@ $primary-color: #your-primary-color;*/
 .about .call-us .play-btn {
   width: 94px;
   height: 94px;
-  /*background: $play-btn-gradient;*/
+  background: radial-gradient(#ce1212 50%, rgba(206, 18, 18, 0.4) 52%);
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -152,9 +125,7 @@ $primary-color: #your-primary-color;*/
   transform: scale(20);
 }
 
-/*$primary-color: #your-primary-color; // replace with your color
-$error-message-bg: #your-error-message-bg; // replace with your background color
-$sent-message-bg: #your-sent-message-bg; // replace with your background color*/
+/* Contact Section styles */
 .contact .info-item {
   background: #f4f4f4;
   padding: 30px;
@@ -205,29 +176,30 @@ $sent-message-bg: #your-sent-message-bg; // replace with your background color*/
 .contact .php-email-form .form-group {
   padding-bottom: 20px;
 }
-.contact .php-email-form .error-message,
-.contact .php-email-form .sent-message,
-.contact .php-email-form .loading {
-  display: none;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
 .contact .php-email-form .error-message {
+  display: none;
   color: #fff;
   background: #df1529;
   text-align: left;
+  padding: 15px;
+  font-weight: 600;
 }
 .contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 .contact .php-email-form .sent-message {
+  display: none;
   color: #fff;
   background: #059652;
   text-align: center;
+  padding: 15px;
+  font-weight: 600;
 }
 .contact .php-email-form .loading {
+  display: none;
   background: #fff;
+  text-align: center;
+  padding: 15px;
 }
 .contact .php-email-form .loading:before {
   content: "";
@@ -273,11 +245,9 @@ $sent-message-bg: #your-sent-message-bg; // replace with your background color*/
 /*About*/
 /*Menu*/
 /*Testimonials*/
-/*$primary-color: #fdcf5d;
-$font-secondary: 'YourSecondaryFont'; // replace with your font
-$secondary-color: #your-secondary-color; // replace with your color*/
+/* Header */
 .header {
-  background: #ce1212;
+  background: #fdcf5d;
   transition: all 0.5s;
   z-index: 997;
   height: calculate-header-height(90px, 70px);
@@ -286,6 +256,12 @@ $secondary-color: #your-secondary-color; // replace with your color*/
 .header.sticked {
   border-color: white;
 }
+
+@media (max-width: 575px) {
+  .header {
+    height: 70px;
+  }
+}
 .header .logo img {
   max-height: 40px;
   margin-right: 6px;
@@ -293,27 +269,21 @@ $secondary-color: #your-secondary-color; // replace with your color*/
 .header .logo h1 {
   font-size: 28px;
   font-weight: 700;
-  color: var(--color-primary);
+  color: #ce1212;
   margin: 0;
   font-family: var(--font-secondary);
 }
 .header .logo h1 span {
-  color: #ce1212;
+  color: var(--color-primary);
 }
 
-/*$primary-font: "Amatic SC", sans-serif;
-$transition-duration: 0.3s;
-$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-$hover-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-$primary-color: crimson;
-$btn-transition-speed: 0.3s;*/
+/* Hero Section styles */
 .hero {
   width: 100%;
   background-size: cover;
   position: relative;
-  min-height: 75vh;
-  padding: 180px 0 80px 0;
-  background-image: url("../assets/img/bg.jpg");
+  min-height: 60vh;
+  padding: 160px 0 60px 0;
 }
 
 .section-bg {
@@ -321,11 +291,11 @@ $btn-transition-speed: 0.3s;*/
 }
 
 .hero h2 {
-  font-size: 70px;
-  font-weight: 700;
+  font-size: 68px;
+  font-weight: 500;
   margin-bottom: 20px;
+  color: #37373f;
   font-family: "Amatic SC", sans-serif;
-  color: crimson;
 }
 .hero h2 span {
   color: #ce1212;
@@ -358,8 +328,8 @@ $btn-transition-speed: 0.3s;*/
   box-shadow: #e9120e;
 }
 .hero .btn-book-a-table:hover {
-  background: #9f0e0e;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: #ec2727;
+  box-shadow: #4f4f5a;
 }
 
 i {
@@ -368,6 +338,18 @@ i {
   transition: 0.3s;
   line-height: 0;
   margin-right: 8px;
+}
+
+/*&:hover {
+  color: variable.$primary-color;
+
+  i {
+    color: hover-color(variable.$primary-color);
+  }
+}*/
+.custom-image {
+  max-width: 50%;
+  height: auto;
 }
 
 .centered-container {
@@ -398,7 +380,7 @@ i {
 }
 
 .centered-image {
-  max-width: 150px;
+  max-width: 120px;
   height: auto;
   margin-bottom: 20px;
 }
@@ -409,23 +391,25 @@ i {
 }
 
 /* Menu Section styles */
-.menu .nav-tabs {
-  border: 0;
-}
-
 .menu {
   font-family: "Amatic SC", sans-serif;
   font-size: 40px;
   color: var(--color-primary);
+  text-align: center;
 }
 .menu h2 {
   font-family: "Amatic SC", sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   color: #ce1212;
+}
+.menu p {
+  font-family: "Amatic SC", sans-serif;
+  font-size: 50px;
+  color: #37373f;
 }
 .menu .ingredients {
   font-family: "Times New Roman", Times, serif;
-  font-size: 15px;
+  font-size: 25px;
   color: #ce1212;
 }
 .menu .nav-tabs {
@@ -484,7 +468,6 @@ i {
 .menu .nav-link .tab-content .menu-item h4 {
   font-size: 22px;
   font-weight: 500;
-  text-align: center;
   color: #ce1212;
   font-family: "Inter", sans-serif;
   margin-bottom: 5px;
@@ -493,40 +476,35 @@ i {
   font-family: "Inter", sans-serif;
   color: #8d8d9b;
   margin-bottom: 5px;
-  display: flex;
-  justify-content: center;
 }
 .menu .nav-link .tab-content .menu-item .price {
   font-size: 24px;
   font-weight: 700;
   color: #ce1212;
 }
-
-@media (max-width: 575px) {
-  .menu .nav-link {
-    margin: 0 10px;
-    padding: 10px 0;
-  }
-}
-.menu .nav-link i {
-  padding-right: 15px;
-  font-size: 48px;
+.menu-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.menu .nav-link.active {
-  color: var(--color-primary);
-  border-color: var(--color-primary);
+/* Section */
+section {
+  scroll-margin-top: calculate-header-height(90px, 70px);
 }
 
-/*$primary-color: #007bff; // Replace with your primary color
-$star-color: #f39c12; // Replace with your star color
-$quote-color: #6c757d; // Replace with your quote color*/
 /* Testimonials Section styles */
-.testimonials .section-header {
+.testimonials .section-header h2 {
   margin-bottom: 40px;
   font-family: "Amatic SC", sans-serif;
-  font-size: 20px;
+  font-size: 50px;
   text-align: center;
+  color: #9f0e0e;
+}
+.section-header .p {
+  font-family: "Amatic SC", sans-serif;
+  color: #37373f;
+  font-size: 30px;
 }
 .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
@@ -583,32 +561,19 @@ $quote-color: #6c757d; // Replace with your quote color*/
   margin-top: 40px;
   position: relative;
 }
-.testimonials .swiper-pagination .swiper-pagination-bullet:nth-child(1) {
+.testimonials .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #d1d1d7;
   opacity: 1;
 }
-.testimonials .swiper-pagination .swiper-pagination-bullet:nth-child(2) {
-  width: 12px;
-  height: 12px;
+.testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #ce1212;
-  opacity: 1;
-}
-.testimonials .swiper-pagination .swiper-pagination-bullet:nth-child(3) {
-  width: 12px;
-  height: 12px;
-  background-color: #d1d1d7;
-  opacity: 1;
 }
 
-/*$font-secondary: "YourFontSecondary"; // Replace with your font
-$color-primary: #e9120e; // Replace with your color
-$color-secondary: #7f7f90; // Replace with your color*/
 /* Desktop Navigation */
 @media (min-width: 1280px) {
   .navbar {
-    position: fixed;
     padding: 0;
     background-color: #fdcf5d;
   }
@@ -637,8 +602,8 @@ $color-secondary: #7f7f90; // Replace with your color*/
     justify-content: space-between;
     padding: 0 3px;
     font-family: var(--font-secondary);
-    font-size: 20px;
-    font-weight: 800;
+    font-size: 16px;
+    font-weight: 600;
     color: #e9120e;
     white-space: nowrap;
     transition: 0.3s;
@@ -646,7 +611,7 @@ $color-secondary: #7f7f90; // Replace with your color*/
   }
   .navbar a i,
   .navbar a:focus i {
-    font-size: 20px;
+    font-size: 12px;
     line-height: 0;
     margin-left: 5px;
   }
@@ -655,7 +620,7 @@ $color-secondary: #7f7f90; // Replace with your color*/
     content: "";
     position: absolute;
     width: 100%;
-    height: 20px;
+    height: 2px;
     bottom: -6px;
     left: 0;
     background-color: #e9120e;
@@ -720,7 +685,6 @@ $color-secondary: #7f7f90; // Replace with your color*/
     visibility: visible;
   }
 }
-/* Media Query Adjustments */
 @media (min-width: 1280px) and (min-width: 1280px) and (max-width: 1366px) {
   .dropdown .dropdown ul {
     left: -90%;
@@ -729,7 +693,6 @@ $color-secondary: #7f7f90; // Replace with your color*/
     left: -100%;
   }
 }
-/* Additional Styles for Desktop Navigation */
 @media (min-width: 1280px) {
   .mobile-nav-show,
   .mobile-nav-hide {
@@ -743,7 +706,7 @@ $color-secondary: #7f7f90; // Replace with your color*/
   }
 }
 /* Mobile Navigation */
-@media (max-width: 375px) {
+@media (max-width: 1279px) {
   .navbar {
     position: fixed;
     top: 0;
@@ -773,7 +736,7 @@ $color-secondary: #7f7f90; // Replace with your color*/
     padding: 10px 20px;
     font-family: var(--font-secondary);
     border-bottom: 2px solid rgba(158, 148, 67, 0.8);
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     color: #7f7f90;
     white-space: nowrap;
@@ -781,7 +744,7 @@ $color-secondary: #7f7f90; // Replace with your color*/
   }
   .navbar a i,
   .navbar a:focus i {
-    font-size: 20px;
+    font-size: 12px;
     line-height: 0;
     margin-left: 5px;
   }
@@ -805,6 +768,34 @@ $color-secondary: #7f7f90; // Replace with your color*/
     transition: all 0.5s ease-in-out;
     border: 1px solid #eee;
   }
+  .navbar .dropdown>.dropdown-active,
+  .navbar .dropdown .dropdown>.dropdown-active {
+    display: block;
+  }
+  .mobile-nav-show {
+    color: var(--color-secondary);
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 0;
+    transition: 0.5s;
+    z-index: 9999;
+    margin: 0 10px 0 20px;
+  }
+  .mobile-nav-hide {
+    color: var(--color-secondary);
+    font-size: 32px;
+    cursor: pointer;
+    line-height: 0;
+    transition: 0.5s;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 9999;
+  }
+  .mobile-nav-active {
+    overflow: hidden;
+  }
+  
   .navbar .dropdown ul a,
   .navbar .dropdown .dropdown ul a {
     padding: 10px 20px;
@@ -862,74 +853,98 @@ $color-secondary: #7f7f90; // Replace with your color*/
     z-index: 9996;
   }
 }
-.mobile-nav-hide {
-  color: rgba(158, 148, 67, 0.8);
-  font-size: 32px;
-  cursor: pointer;
-  line-height: 0;
-  transition: 0.5s;
-  position: fixed;
-  right: 20px;
-  top: 20px;
-  z-index: 9999;
+
+:root {
+  scroll-behavior: smooth;
 }
 
-.mobile-nav-active {
-  overflow: hidden;
-}
-
-.mobile-nav-active .navbar {
-  right: 0;
-}
-
-.mobile-nav-active .navbar:before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.8);
-  z-index: 9996;
-}
-
-/* Test for $font-stack variable */
 body {
   font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: #212529;
   background-image: none;
 }
-
-/* Test for $swiper-pagination-bullet-color variable */
-.gallery .swiper-pagination .swiper-pagination-bullet {
-  background-color: #d1d1d7;
+body a {
+  color: #ce1212;
+  text-decoration: none;
+}
+body a:hover {
+  color: #ec2727;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "Inter", sans-serif;
 }
 
-/* Test for $swiper-pagination-bullet-active-color variable */
+@media (max-width: 640px) {
+  .hero h2 {
+    font-size: 36px;
+  }
+}
+/*@keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}*/
+/* Gallery Section styles */
+.gallery {
+  overflow: hidden;
+}
+.section-header h2 {
+  font-family: "Amatic SC", sans-serif;
+  font-size: 50px;
+  text-align: center;
+  color: #9f0e0e;
+}
+.section-header p {
+  font-family: "Amatic SC", sans-serif;
+  font-size: 30px;
+  color: #4f4f5a;
+  text-align: center;
+}
+.gallery .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+.gallery .swiper-pagination .swiper-pagination-bullet {
+  width: 15px;
+  height: 12px;
+  background-color: #d1d1d7;
+  opacity: 1;
+}
 .gallery .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #ce1212;
 }
-
-/* Loop for generating .swiper-pagination-bullet styles */
-.gallery .swiper-pagination .swiper-pagination-bullet:nth-child(1) {
-  width: 15px;
-  height: 12px;
-  background-color: #d1d1d7;
-  opacity: 1;
+.gallery .swiper-slide-active {
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .gallery .swiper-slide-active {
+    border: 6px solid #ce1212;
+    padding: 4px;
+    background: #fff;
+    z-index: 1;
+    transform: scale(1.2);
+  }
+}
+@media (min-width: 992px) {
+  .gallery .swiper-wrapper {
+    padding: 40px 0;
+  }
 }
 
-.gallery .swiper-pagination .swiper-pagination-bullet:nth-child(2) {
-  width: 15px;
-  height: 12px;
-  background-color: #ce1212;
-  opacity: 1;
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-
-.gallery .swiper-pagination .swiper-pagination-bullet:nth-child(3) {
-  width: 15px;
-  height: 12px;
-  background-color: #d1d1d7;
-  opacity: 1;
-}
-
-/* Styles for Scroll top button */
+/* Scroll top button styles */
 .scroll-top {
   visibility: hidden;
   position: fixed;
@@ -950,27 +965,27 @@ body {
   background: #ec2727;
 }
 
-/* Loop for adding styles to .swiper-slide-active */
-.gallery .swiper-slide-active {
+/* Centered content styles */
+.centered-content {
   text-align: center;
+  padding: 20px;
+  background-color: #F8DA8B;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
 }
-@media (min-width: 992px) {
-  .gallery .swiper-slide-active {
-    border: 6px solid #ce1212;
-    padding: 4px;
-    background: #fff;
-    z-index: 1;
-    transform: scale(1.2);
-  }
+.centered-content:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
 
-/* Loop for adding padding to .swiper-wrapper */
-@media (min-width: 992px) {
-  .gallery .swiper-wrapper {
-    padding: 40px 0;
-  }
+.centered-image {
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 20px;
 }
-/* Loop for adding styles to .search-button */
+
+/* Search button styles */
 .search-button {
   background-color: crimson;
   border-color: crimson;
@@ -981,9 +996,52 @@ body {
   border-color: #9f0e0e;
 }
 
-/* Section */
-section {
-  scroll-margin-top: calculate-header-height(90px, 70px);
+/*# sourceMappingURL=home.css.map */
+/* Add this CSS to your stylesheet */
+
+/* Style for the info items */
+.info-item {
+  border: 1px solid #ddd; /* Add a border for a subtle separation */
+  padding: 15px;
+  transition: background-color 0.3s; /* Add a smooth transition effect for the background color */
 }
 
-/*# sourceMappingURL=home.css.map */
+/* Hover effect for the info items */
+.info-item:hover {
+  background-color: #f5f5f5; /* Change the background color on hover */
+  cursor: pointer; /* Add a pointer cursor on hover */
+}
+
+/* Mouse enter effect for the info items */
+.info-item.mouse-enter {
+  background-color: #e0e0e0; /* Change the background color on mouseenter */
+}
+
+/* Mouse leave effect for the info items */
+.info-item.mouse-leave {
+  background-color: initial; /* Revert the background color on mouseleave */
+}
+/* Desktop (1280px - 800px) */
+@media (min-width: 800px) and (max-width: 1280px) {
+  /* Add your desktop styles here */
+  body {
+    background-color: lightblue;
+  }
+}
+
+/* Tablet (810px - 1080px) */
+@media (min-width: 810px) and (max-width: 1080px) {
+  /* Add your tablet styles here */
+  body {
+    background-color: lightgreen;
+  }
+}
+
+/* Mobile (375px - 812px) */
+@media (min-width: 375px) and (max-width: 812px) {
+  /* Add your mobile styles here */
+  body {
+    background-color: lightcoral;
+  }
+}
+

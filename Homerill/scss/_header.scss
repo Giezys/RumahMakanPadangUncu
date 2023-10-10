@@ -3,7 +3,7 @@ $font-secondary: 'YourSecondaryFont'; // replace with your font
 $secondary-color: #your-secondary-color; // replace with your color*/
 
 @mixin headerStyles($height, $borderColor) {
-  background: variable.$primary-color;
+  background: #fdcf5d;
   transition: all 0.5s;
   z-index: 997;
   height: $height;

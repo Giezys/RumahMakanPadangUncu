@@ -7,13 +7,13 @@
 /* About Section styles */
 .about .section-header h2 {
   font-family: "Amatic SC", sans-serif;
-  font-size: 25px;
-  color: #4f4f5a;
+  font-size: 60px;
+  color: ce1212;
 }
 .about .section-header p {
   font-family: "Amatic SC", sans-serif;
-  font-size: 65px;
-  color: #ce1212;
+  font-size: 27px;
+  color: #37373f;
 }
 .about .about-img {
   min-height: 500px;

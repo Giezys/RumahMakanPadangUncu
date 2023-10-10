@@ -7,6 +7,30 @@ $secondary-color: #f8da8b;
 $text-color: #333;
 $primary-font: 'sans-serif';
 
+// Kondisi (if-else) untuk mengatur ukuran font berdasarkan layar
+$font-size-mobile: 16px;
+$font-size-desktop: 20px;
+
+$screen-size: 'desktop'; // Ganti dengan 'mobile' jika diperlukan
+
+@if $screen-size == 'mobile' {
+  $font-size: $font-size-mobile;
+} @else {
+  $font-size: $font-size-desktop;
+}
+
+
+// Perulangan (for) untuk menghasilkan berbagai tombol dengan warna yang berbeda
+@for $i from 1 through 5 {
+  .btn-color-#{$i} {
+    background-color: darken-color($primary-color, $i * 10%);
+    &:hover {
+      background-color: darken-color($primary-color, ($i + 1) * 10%);
+    }
+  }
+}
+
+
 // Fungsi untuk membuat warna lebih gelap
 @function darken-color($color, $percentage) {
   $r: math.div($percentage * red($color), 100);

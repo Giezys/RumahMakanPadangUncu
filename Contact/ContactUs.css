@@ -1,3 +1,38 @@
+.btn-color-1 {
+  background-color: darken-color(#800000, 10%);
+}
+.btn-color-1:hover {
+  background-color: darken-color(#800000, 20%);
+}
+
+.btn-color-2 {
+  background-color: darken-color(#800000, 20%);
+}
+.btn-color-2:hover {
+  background-color: darken-color(#800000, 30%);
+}
+
+.btn-color-3 {
+  background-color: darken-color(#800000, 30%);
+}
+.btn-color-3:hover {
+  background-color: darken-color(#800000, 40%);
+}
+
+.btn-color-4 {
+  background-color: darken-color(#800000, 40%);
+}
+.btn-color-4:hover {
+  background-color: darken-color(#800000, 50%);
+}
+
+.btn-color-5 {
+  background-color: darken-color(#800000, 50%);
+}
+.btn-color-5:hover {
+  background-color: darken-color(#800000, 60%);
+}
+
 .container h2 {
   font-size: 24px;
   color: #333;
@@ -12,7 +47,7 @@
 
 .form-check-input:checked {
   background-color: #800000;
-  border-color: #800000;
+  border-color:  #800000;
   box-shadow: none;
 }
 
@@ -341,6 +376,7 @@ section {
 }
 
 
+
 /* Search button styles */
 .search-button {
   background-color: crimson;
@@ -353,6 +389,7 @@ section {
 }
 
 /*# sourceMappingURL=style.css.map */
+
 
 #myCarousel {
   width: 100%;
@@ -374,7 +411,7 @@ section {
 }
 
 .footer-container {
-  background-color: #f8da8b;
+  background-color:  #C69940;
   color: white;
   text-align: center;
   padding: 10px;

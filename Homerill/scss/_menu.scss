@@ -2,123 +2,139 @@
 .menu .nav-tabs {
   border: 0;
 }
+
 .menu {
-    h2 {
-      font-family: variable.$header-font;
-      font-size: 20px;
-      color: variable.$text-color-menu;
-    }
-  
+  h2 {
     font-family: variable.$header-font;
-    font-size: 40px;
-    color: variable.$secondary-color;
-  
-    .ingredients {
-      font-family: "Times New Roman", Times, serif;
-      font-size: 15px;
-      color: variable.$text-color-menu;
+    font-size: 20px;
+    color: variable.$text-color-menu;
+  }
+
+  font-family: variable.$header-font;
+  font-size: 40px;
+  color: variable.$secondary-color;
+
+  .ingredients {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+    color: variable.$text-color-menu;
+  }
+
+  .nav-tabs {
+    border: 0;
+  }
+
+  .nav-link {
+    margin: 0 variable.$menu-item-margin;
+    padding: 10px 5px;
+    transition: 0.3s;
+    color: variable.$text-color-menu;
+    border-radius: 0;
+    cursor: pointer;
+    height: 100%;
+    border: 0;
+    border-bottom: 2px solid #b6b6bf;
+
+    i {
+      padding-right: 15px;
+      font-size: 48px;
     }
-  
-    .nav-tabs {
-      border: 0;
+
+    h4 {
+      font-size: 18px;
+      font-weight: 400;
+      margin: 0;
+      font-family: variable.$body-font;
     }
-  
-    .nav-link {
-      margin: 0 variable.$menu-item-margin;
-      padding: 10px 5px;
-      transition: 0.3s;
-      color: variable.$text-color-menu;
-      border-radius: 0;
-      cursor: pointer;
-      height: 100%;
-      border: 0;
-      border-bottom: 2px solid #b6b6bf;
-  
-      i {
-        padding-right: 15px;
-        font-size: 48px;
-      }
-  
-      h4 {
-        font-size: 18px;
-        font-weight: 400;
-        margin: 0;
-        font-family: variable.$body-font;
-      }
-  
-      &:hover {
-        color: hover-color(variable.$text-color-menu);
-      }
-  
-      &.active {
-        color: variable.$tab-hover-color;
-        border-color: variable.$tab-hover-color;
-      }
-  
-      .tab-content {
-        .tab-header {
-          padding: 30px 0;
-  
-          p {
-            font-size: 14px;
-            text-transform: uppercase;
-            color: variable.$tab-hover-color;
-            margin-bottom: 0;
-          }
-  
-          h3 {
-            font-size: 36px;
-            font-weight: 600;
-            color: variable.$primary-color;
-          }
+
+    &:hover {
+      color: hover-color(variable.$text-color-menu);
+    }
+
+    &.active {
+      color: variable.$tab-hover-color;
+      border-color: variable.$tab-hover-color;
+    }
+
+    .tab-content {
+      .tab-header {
+        padding: 30px 0;
+
+        p {
+          font-size: 14px;
+          text-transform: uppercase;
+          color: variable.$tab-hover-color;
+          margin-bottom: 0;
         }
-  
-        .menu-item {
-          text-align-last: center;
+
+        h3 {
+          font-size: 36px;
+          font-weight: 600;
+          color: variable.$primary-color;
+        }
+      }
+
+      .menu-item {
+        text-align-last: center;
+        margin-bottom: variable.$menu-item-margin;
+
+        .menu-img {
+          padding: 0 30px; /* Adjust the padding */
           margin-bottom: variable.$menu-item-margin;
-  
-          .menu-img {
-            padding: 0 60px;
-            margin-bottom: variable.$menu-item-margin;
-          }
-  
-          h4 {
-            font-size: 22px;
-            font-weight: 500;
-            text-align: center;
-            color: variable.$text-color-menu;
-            font-family: variable.$body-font;
-            margin-bottom: 5px;
-          }
-  
-          .ingredients {
-            font-family: variable.$body-font;
-            color: variable.$ingredient-color;
-            margin-bottom: 5px;
-            display: flex;
-            justify-content: center;
-          }
-  
-          .price {
-            font-size: 24px;
-            font-weight: 700;
-            color: variable.$primary-color;
-          }
+        }
+
+        h4 {
+          font-size: 22px;
+          font-weight: 500;
+          text-align: center;
+          color: variable.$text-color-menu;
+          font-family: variable.$body-font;
+          margin-bottom: 5px;
+        }
+
+        .ingredients {
+          font-family: variable.$body-font;
+          color: variable.$ingredient-color;
+          margin-bottom: 5px;
+          display: flex;
+          justify-content: center;
+        }
+
+        .price {
+          font-size: 24px;
+          font-weight: 700;
+          color: variable.$primary-color;
         }
       }
     }
   }
-  @media (max-width: 575px) {
+
+  @media (min-width: 575px) {
     .menu .nav-link {
       margin: 0 10px;
       padding: 10px 0;
     }
+
+    .menu-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
-  .menu .nav-link i {
-    padding-right: 15px;
-    font-size: 48px;
+
+  @media (min-width: 576px) and (max-width: 767px) {
+    .menu-item {
+      width: 20px; /* Display two items per row on tablets */
+    }
   }
-  .menu .nav-link.active {
-    color: var(--color-primary);
-    border-color: var(--color-primary);
-  }
+}
+
+.menu .nav-link i {
+  padding-right: 15px;
+  font-size: 48px;
+}
+
+.menu .nav-link.active {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}

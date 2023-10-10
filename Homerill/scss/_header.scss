@@ -1,31 +1,38 @@
-/* Header */
-.header {
-    background: #fdcf5d;
-    transition: all 0.5s;
-    z-index: 997;
-    height: calculate-header-height(90px, 70px);
-    border-bottom: 1px solid #fff;
-  
-    &.sticked {
-      border-color: calculate-border-color(#eee);
+/*$primary-color: #fdcf5d;
+$font-secondary: 'YourSecondaryFont'; // replace with your font
+$secondary-color: #your-secondary-color; // replace with your color*/
+
+@mixin headerStyles($height, $borderColor) {
+  background: #fdcf5d;
+  transition: all 0.5s;
+  z-index: 997;
+  height: $height;
+  border-bottom: 1px solid #fff;
+
+  &.sticked {
+    border-color: $borderColor;
+  }
+
+  .logo {
+    img {
+      max-height: 40px;
+      margin-right: 6px;
     }
-  
-    .logo {
-      img {
-        max-height: 40px;
-        margin-right: 6px;
-      }
-  
-      h1 {
-        font-size: 28px;
-        font-weight: 700;
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: variable.$secondary-color;
+      margin: 0;
+      font-family: variable.$font-secondary;
+
+      span {
         color: variable.$primary-color;
-        margin: 0;
-        font-family: variable.$font-secondary;
-  
-        span {
-          color: variable.$secondary-color;
-        }
       }
     }
   }
+}
+
+.header {
+  @include headerStyles(calculate-header-height(90px, 70px), calculate-border-color(#eee));
+}

@@ -1,3 +1,7 @@
+/*$primary-color: #ce1212;
+$error-message-bg: #df1529;
+$sent-message-bg: #059652;*/
+
 @use 'variable';
 @import 'about';
 @import 'contact';
@@ -5,114 +9,45 @@
 @import 'header';
 @import 'hero';
 @import 'menu';
-@import 'section';
 @import 'testimonials';
 @import 'navbar';
-
-:root {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: variable.$font-stack;
-  color: #212529;
-
-  a {
-    color: variable.$primary-color;
-    text-decoration: none;
-
-    &:hover {
-      color: hover-color(variable.$primary-color);
-    }
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: "Inter", sans-serif;
-  }
-}
-
-
-
-
-@media (max-width: 640px) {
-  .hero h2 {
-    font-size: 36px;
-  }
-
-  
-}
-
-
-/*@keyframes pulsate-btn {
-  0% {
-    transform: scale(0.6, 0.6);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1, 1);
-    opacity: 0;
-  }
-}*/
-
-
-
-/* Gallery Section styles */
-.gallery {
-  overflow: hidden;
-
-  .swiper-pagination {
-    margin-top: 20px;
-    position: relative;
-
-    .swiper-pagination-bullet {
-      width: 15px;
-      height: 12px;
-      background-color: variable.$swiper-pagination-bullet-color;
-      opacity: 1;
-    }
-
-    .swiper-pagination-bullet-active {
-      background-color: variable.$swiper-pagination-bullet-active-color;
-    }
-  }
-
-  .swiper-slide-active {
-    text-align: center;
-
-    @media (min-width: 992px) {
-      border: 6px solid variable.$primary-color;
-      padding: 4px;
-      background: #fff;
-      z-index: 1;
-      transform: scale(1.2);
-    }
-  }
-
-  @media (min-width: 992px) {
-    .swiper-wrapper {
-      padding: 40px 0;
-    }
-  }
-}
-$primary-color: #ce1212;
-$error-message-bg: #df1529;
-$sent-message-bg: #059652;
 
 @function lighten-color($color, $percent) {
   @return lighten($color, $percent);
 }
 
+/* Test for $font-stack variable */
+body {
+  font-family: variable.$font-stack;
+  color: #212529;
+  background-image: none;
+}
 
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
+/* Test for $swiper-pagination-bullet-color variable */
+@if variable.$swiper-pagination-bullet-color {
+  .gallery .swiper-pagination .swiper-pagination-bullet {
+    background-color: variable.$swiper-pagination-bullet-color;
   }
 }
 
-/* Scroll top button styles */
+/* Test for $swiper-pagination-bullet-active-color variable */
+@if variable.$swiper-pagination-bullet-active-color {
+  .gallery .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: variable.$swiper-pagination-bullet-active-color;
+  }
+}
+
+/* Loop for generating .swiper-pagination-bullet styles */
+@for $i from 1 through 3 {
+  .gallery .swiper-pagination .swiper-pagination-bullet:nth-child(#{$i}) {
+    width: 15px;
+    height: 12px;
+    background-color: if($i == 2, variable.$primary-color, variable.$swiper-pagination-bullet-color);
+    opacity: 1;
+  }
+}
+
+/* Styles for Scroll top button */
 .scroll-top {
   visibility: hidden;
   position: fixed;
@@ -130,32 +65,31 @@ $sent-message-bg: #059652;
   transition: variable.$transition-duration;
 
   &:hover {
-    background: variable.$hover-color;
+    background: hover-color(variable.$primary-color);
   }
 }
 
-/* Centered content styles */
-.centered-content {
+/* Loop for adding styles to .swiper-slide-active */
+.gallery .swiper-slide-active {
   text-align: center;
-  padding: 20px;
-  background-color: #F8DA8B;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow variable.$transition-duration, transform variable.$transition-duration;
 
-  &:hover {
-    box-shadow: variable.$hover-shadow;
-    transform: scale(1.05);
+  @media (min-width: 992px) {
+    border: 6px solid variable.$primary-color;
+    padding: 4px;
+    background: #fff;
+    z-index: 1;
+    transform: scale(1.2);
   }
 }
 
-.centered-image {
-  max-width: 120px;
-  height: auto;
-  margin-bottom: 20px;
+/* Loop for adding padding to .swiper-wrapper */
+@media (min-width: 992px) {
+  .gallery .swiper-wrapper {
+    padding: 40px 0;
+  }
 }
 
-/* Search button styles */
+/* Loop for adding styles to .search-button */
 .search-button {
   background-color: crimson;
   border-color: crimson;
@@ -165,4 +99,8 @@ $sent-message-bg: #059652;
     background-color: darken(variable.$primary-color, 10%);
     border-color: darken(variable.$primary-color, 10%);
   }
+}
+/* Section */
+section {
+  scroll-margin-top: calculate-header-height(90px, 70px);
 }

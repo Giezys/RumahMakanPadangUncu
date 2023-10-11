@@ -1,11 +1,13 @@
-/* Location Style Mulai Ini */
-/* Header */
-/* Section */
-/* Desktop Navigation */
-/* Mobile Navigation */
-/* Scroll top button styles */
-/* Search button styles */
-/*# sourceMappingURL=style.css.map */
+@use 'variable';
+@import 'button';
+@import 'function';
+@import 'header';
+@import 'navbar';
+
+
+@function hover-color($color) {
+    @return lighten($color, 10%);
+  }
 
 .navbar {
 	background-color: $background-color_1;
@@ -104,10 +106,6 @@ section {
 }
 
 /*section*/
-@function hover-color($color) {
-    @return lighten($color, 10%);
-  }
-  
   @function calculate-dropdown-position($offset) {
     @return calc(100% + #{$offset});
   }

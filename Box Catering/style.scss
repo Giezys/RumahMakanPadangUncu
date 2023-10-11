@@ -1,6 +1,16 @@
 $font-stack: Helvetica, sans-serif;
 $background-color: rgb(0, 24, 73);
 $primary-color: blue;
+$first-width: 20px;
+$second-width: 15px;
+
+@function atur-width($n) {
+    @return $n * $first-width + ($n - 1) * $second-width;
+}
+
+#set_width {
+    padding-top: atur-width(10);
+}
 
 ul {
     font: 100% $font-stack;

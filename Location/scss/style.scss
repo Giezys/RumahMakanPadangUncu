@@ -1,32 +1,3 @@
-/* Variabel */
-$color_1: #FF0000;
-$color_2: black;
-$color_3: #212529;
-$color_4: #ce1212;
-$color_5: #ec2727;
-$color_6: #e51414;
-$color_7: var(--color-primary);
-$color_8: #e9120e;
-$color_9: #000;
-$color_10: #7f7f90;
-$color_11: rgba(158, 148, 67, 0.8);
-$color_12: #fff;
-$font-family_1: 'Lalezar', cursive;
-$font-family_2: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$font-family_3: "Inter", sans-serif;
-$font-family_4: var(--font-secondary);
-$background-color_1: #F8DA8B;
-$background-color_2: rgba(0,0,0,0.2);
-$background-color_3: #fdcf5d;
-$background-color_4: #e9120e;
-$background-color_5: rgba(0, 0, 0, 0.2);
-$background-color_6: crimson;
-$background-color_7: #9f0e0e;
-$border-color_1: white;
-$border-color_2: #e9120e;
-$border-color_3: crimson;
-$border-color_4: #9f0e0e;
-
 /* Location Style Mulai Ini */
 /* Header */
 /* Section */
@@ -35,6 +6,7 @@ $border-color_4: #9f0e0e;
 /* Scroll top button styles */
 /* Search button styles */
 /*# sourceMappingURL=style.css.map */
+
 .navbar {
 	background-color: $background-color_1;
 }
@@ -130,6 +102,27 @@ body {
 section {
 	scroll-margin-top: calculate-header-height(90px, 70px);
 }
+
+/*section*/
+@function hover-color($color) {
+    @return lighten($color, 10%);
+  }
+  
+  @function calculate-dropdown-position($offset) {
+    @return calc(100% + #{$offset});
+  }
+  
+  @function calculate-carousel-height($height) {
+    @return ($height - 10%);
+  }
+
+@function hover-color($color) {
+    @return lighten($color, 10%);
+  }
+  @function calculate-border-color($color) {
+    @return lighten($color, 10%);
+  }
+
 .scroll-top {
 	visibility: hidden;
 	position: fixed;

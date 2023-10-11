@@ -1,0 +1,25 @@
+.btn-secondary {
+    background-color: $primary-color;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: darken-color($primary-color, 10%); // Menggunakan fungsi darken-color
+    }
+  }
+  
+  .search-submit {
+    background-color: $primary-color;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: darken-color($primary-color, 10%); // Menggunakan fungsi darken-color
+    }
+  }
+  

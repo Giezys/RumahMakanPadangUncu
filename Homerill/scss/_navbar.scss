@@ -1,11 +1,6 @@
-/*$font-secondary: "YourFontSecondary"; // Replace with your font
-$color-primary: #e9120e; // Replace with your color
-$color-secondary: #7f7f90; // Replace with your color*/
-
 /* Desktop Navigation */
 @media (min-width: 1280px) {
   .navbar {
-    position: fixed;
     padding: 0;
     background-color: #fdcf5d;
   }
@@ -33,17 +28,17 @@ $color-secondary: #7f7f90; // Replace with your color*/
     align-items: center;
     justify-content: space-between;
     padding: 0 3px;
-    font-family: variable.$font-secondary;
-    font-size: 20px;
-    font-weight: 800;
-    color: variable.$color-primary;
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    font-weight: 600;
+    color: #e9120e;
     white-space: nowrap;
     transition: 0.3s;
     position: relative;
   }
   .navbar a i,
   .navbar a:focus i {
-    font-size: 20px;
+    font-size: 12px;
     line-height: 0;
     margin-left: 5px;
   }
@@ -52,10 +47,10 @@ $color-secondary: #7f7f90; // Replace with your color*/
     content: "";
     position: absolute;
     width: 100%;
-    height: 20px;
+    height: 2px;
     bottom: -6px;
     left: 0;
-    background-color: variable.$color-primary;
+    background-color: #e9120e;
     visibility: hidden;
     width: 0;
     transition: all 0.3s ease-in-out;
@@ -98,7 +93,7 @@ $color-secondary: #7f7f90; // Replace with your color*/
   .navbar .dropdown ul li a:hover,
   .navbar .dropdown ul li .active:hover > a,
   .navbar .dropdown ul li li:hover > a {
-    color: variable.$color-primary;
+    color: #e9120e;
   }
   .navbar .dropdown:hover > ul {
     opacity: 1;
@@ -117,8 +112,6 @@ $color-secondary: #7f7f90; // Replace with your color*/
     visibility: visible;
   }
 }
-
-/* Media Query Adjustments */
 @media (min-width: 1280px) and (min-width: 1280px) and (max-width: 1366px) {
   .dropdown .dropdown ul {
     left: -90%;
@@ -127,8 +120,6 @@ $color-secondary: #7f7f90; // Replace with your color*/
     left: -100%;
   }
 }
-
-/* Additional Styles for Desktop Navigation */
 @media (min-width: 1280px) {
   .mobile-nav-show,
   .mobile-nav-hide {
@@ -141,15 +132,14 @@ $color-secondary: #7f7f90; // Replace with your color*/
     background-color: #F8DA8B;
   }
 }
-
 /* Mobile Navigation */
-@media (max-width: 375px) {
+@media (max-width: 1279px) {
   .navbar {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 100%;
-    max-width: 400px;
+    width: 500px;
+    max-width: 750px;
     border-left: 1px solid #666;
     bottom: 0;
     transition: 0.3s;
@@ -171,9 +161,9 @@ $color-secondary: #7f7f90; // Replace with your color*/
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    font-family: variable.$font-secondary;
+    font-family: var(--font-secondary);
     border-bottom: 2px solid rgba(158, 148, 67, 0.8);
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     color: #7f7f90;
     white-space: nowrap;
@@ -181,7 +171,7 @@ $color-secondary: #7f7f90; // Replace with your color*/
   }
   .navbar a i,
   .navbar a:focus i {
-    font-size: 20px;
+    font-size: 12px;
     line-height: 0;
     margin-left: 5px;
   }
@@ -194,49 +184,9 @@ $color-secondary: #7f7f90; // Replace with your color*/
   .navbar .active,
   .navbar .active:focus {
     color: #000;
-    border-color: variable.$color-primary;
+    border-color: #e9120e;
   }
-  .navbar .dropdown ul,
-  .navbar .dropdown .dropdown ul {
-    position: static;
-    display: none;
-    padding: 10px 0;
-    margin: 10px 20px;
-    transition: all 0.5s ease-in-out;
-    border: 1px solid #eee;
-  }
-  .navbar .dropdown ul a,
-  .navbar .dropdown .dropdown ul a {
-    padding: 10px 20px;
-    font-size: 15px;
-    text-transform: none;
-    font-weight: 600;
-  }
-  .navbar .dropdown ul a i,
-  .navbar .dropdown .dropdown ul a i {
-    font-size: 12px;
-  }
-  .navbar .dropdown ul a:hover,
-  .navbar .dropdown ul .active:hover > a,
-  .navbar .dropdown ul li:hover > a,
-  .navbar .dropdown .dropdown ul a:hover,
-  .navbar .dropdown .dropdown ul .active:hover > a,
-  .navbar .dropdown .dropdown ul li:hover > a {
-    color: variable.$color-primary;
-  }
-  .navbar .dropdown > .dropdown-active,
-  .navbar .dropdown .dropdown > .dropdown-active {
-    display: block;
-  }
-  .navbar .mobile-nav-show {
-    color: rgba(158, 148, 67, 0.8);
-    font-size: 28px;
-    cursor: pointer;
-    line-height: 0;
-    transition: 0.5s;
-    z-index: 9997;
-    margin: 0 10px 0 20px;
-  }
+
   .navbar .mobile-nav-hide {
     color: rgba(158, 148, 67, 0.8);
     font-size: 32px;
@@ -263,30 +213,38 @@ $color-secondary: #7f7f90; // Replace with your color*/
   }
 }
 
-.mobile-nav-hide {
-  color: variable.$color-secondary;
-  font-size: 32px;
-  cursor: pointer;
-  line-height: 0;
-  transition: 0.5s;
+
+
+/* Scroll top button styles */
+.scroll-top {
+  visibility: hidden;
   position: fixed;
-  right: 20px;
-  top: 20px;
-  z-index: 9999;
+  bottom: 20px;
+  right: 15px;
+  z-index: 9;
+  font-size: 20px;
+  color: #fff;
+  background: #ce1212;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 40px;
+  transition: 0.3s;
+}
+.scroll-top:hover {
+  background: #ec2727;
 }
 
-.mobile-nav-active {
-  overflow: hidden;
-}
 
-.mobile-nav-active .navbar {
-  right: 0;
-}
 
-.mobile-nav-active .navbar:before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.8);
-  z-index: 9996;
+/* Search button styles */
+.search-button {
+  background-color: crimson;
+  border-color: crimson;
+  color: #fff;
+}
+.search-button:hover {
+  background-color: #9f0e0e;
+  border-color: #9f0e0e;
 }

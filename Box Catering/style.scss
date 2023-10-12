@@ -21,3 +21,8 @@ ul {
     $primary-color: green !global;
     color: $promary-color;
 }
+h1 {
+    $primary-color: green !global;
+    color: $primary-color
+    font-size: $ukuranJudul;
+}

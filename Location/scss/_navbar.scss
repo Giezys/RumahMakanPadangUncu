@@ -1,0 +1,11 @@
+@mixin headerStyles($height, $borderColor) {
+    background: #fdcf5d;
+    transition: all 0.5s;
+    z-index: 997;
+    height: $height;
+    border-bottom: 1px solid #fff;
+  
+    &.sticked {
+      border-color: $borderColor;
+    }
+}

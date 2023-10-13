@@ -1,0 +1,31 @@
+/* Header */
+.header {
+    background: #fdcf5d;
+    transition: all 0.5s;
+    z-index: 997;
+    height: calculate-header-height(90px, 70px);
+    border-bottom: 1px solid #fff;
+  
+    &.sticked {
+      border-color: calculate-border-color(#eee);
+    }
+  
+    .logo {
+      img {
+        max-height: 40px;
+        margin-right: 6px;
+      }
+  
+      h1 {
+        font-size: 28px;
+        font-weight: 700;
+        color: variable.$primary-color;
+        margin: 0;
+        font-family: variable.$font-secondary;
+  
+        span {
+          color: variable.$secondary-color;
+        }
+      }
+    }
+  }
